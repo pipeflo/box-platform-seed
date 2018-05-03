@@ -20,10 +20,11 @@ var config = {
 
 if (process.env.VCAP_SERVICES) {
 	var appEnv = cfenv.getAppEnv();
-	//console.log('*******AppEnv:', appEnv);
+	console.log('*******AppEnv:', appEnv);
 
 	//Cloudant
 	var cloudantConfig = appEnv.getService('CloudantBoxPlatform');
+	console.log("CloudantConfig from Connection:", cloudantConfig);
 	config.cloudant.username = cloudantConfig.credentials.username;
 	config.cloudant.password = cloudantConfig.credentials.password;
 	config.cloudant.url = cloudantConfig.credentials.url;
