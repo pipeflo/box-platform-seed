@@ -1,0 +1,24 @@
+{
+  "name": "Box Platform Requests",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bluebird": "3.5.1",
+    "body-parser": "~1.12.4",
+    "box-node-sdk": "^1.16.1",
+    "cfenv": "1.0.3",
+    "cloudant": "1.5.1",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.12.4",
+    "jade": "~1.9.2",
+    "jsonwebtoken": "^7.0.0",
+    "morgan": "~1.5.3",
+    "serve-favicon": "~2.2.1",
+    "string-builder": "0.1.4",
+    "xmlreader": "0.2.3"
+  }
+}

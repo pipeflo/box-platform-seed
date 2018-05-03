@@ -1,0 +1,47 @@
+
+    <!-- Data Table START -->
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Synced Requests Log</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            
+            <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th st-sort="value._id">Sync Request ID</th>
+                    <th st-sort="value.date">Date</th>
+                    <th st-sort="value.results.new">New</th>
+                    <th st-sort="value.results.updated">Updated</th>
+                    <th st-sort="value.results.ignored">Ignored</th>
+                    <th st-sort="value.results.total">Total</th>
+                </tr>
+                <tr>
+                    <th colspan="4">
+                        <input st-search placeholder="Search" class="input-sm form-control" type="search"/>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="row in displayedCollection">
+                    <td>{{row.value._id}}</td>
+                    <td>{{row.value.date | date}}</td>
+                    <td>{{row.value.results.new}}</td>
+                    <td>{{row.value.results.updated}}</td>
+                    <td>{{row.value.results.ignored}}</td>
+                    <td>{{row.value.results.total}}</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="text-center">
+                            <div st-pagination="" st-items-by-page="10" st-displayed-pages="7"></div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        <!-- /.box-body -->
+    </div>
+    <!-- Data Table END -->

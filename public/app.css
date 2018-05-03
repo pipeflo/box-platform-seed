@@ -1,0 +1,49 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.x-lconn-userid {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: none;
+}
+
+.panel-heading {
+    position: fixed;
+    width: 110%;
+    border: solid 1px #e1e1e1;
+    top: -1px;
+}
+
+.panel-body {
+    top: 300px;
+    width: 98%;
+}

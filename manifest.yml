@@ -1,0 +1,8 @@
+applications:
+- path: .
+  memory: 1024M
+  instances: 2
+  domain: mybluemix.net
+  name: kenexaint
+  host: kenexaint
+  disk_quota: 1024M

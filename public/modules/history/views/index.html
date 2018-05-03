@@ -1,0 +1,43 @@
+
+    <!-- Data Table START -->
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">My Requests</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            
+            <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th st-sort="value.idBrassring">Name</th>
+                    <th st-sort="value.idTrabajando">Request ID</th>
+                    <th st-sort="value.lastAction">State</th>
+                    <th st-sort="value.lastUpdate">Actions</th>
+                </tr>
+                <tr>
+                    <th colspan="4">
+                        <input st-search placeholder="Search" class="input-sm form-control" type="search"/>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="row in displayedCollection">
+                    <td>{{row.value.idBrassring}}</td>
+                    <td><a href="http://services.demotbj.com/jobs-v1.4/rest/html/getjob?jobid={{row.value.idTrabajando}}&domainid=857&country=CL&client=KENEXA&token=e06d62a67c82501b674bb4ce52ef6a6c" target="_blank">{{row.value.idTrabajando}}</a></td>
+                    <td>{{row.value.lastAction}}</td>
+                    <td>{{row.value.lastUpdate | date}}</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="text-center">
+                            <div st-pagination="" st-items-by-page="10" st-displayed-pages="7"></div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        <!-- /.box-body -->
+    </div>
+    <!-- Data Table END -->
